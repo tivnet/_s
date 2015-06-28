@@ -170,6 +170,8 @@ function the_archive_title( $before = '', $after = '' ) {
 			$title = esc_html_x( 'Audio', 'post format archive title', '_s' );
 		} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
 			$title = esc_html_x( 'Chats', 'post format archive title', '_s' );
+		} else {
+			$title = esc_html__( 'Archives', '_s' );
 		}
 	} elseif ( is_post_type_archive() ) {
 		$title = sprintf( esc_html__( 'Archives: %s', '_s' ), post_type_archive_title( '', false ) );
